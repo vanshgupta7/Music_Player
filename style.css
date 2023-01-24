@@ -1,0 +1,152 @@
+body{
+    background-color: antiquewhite;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    height: 65px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav li{
+    padding: 0 12px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+.brand img{
+    width: 44px;
+    padding: 8px;
+}
+.container{
+    min-height: 70%;
+    background-color: black;
+    background-image: url("./images/cover.jpeg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: white;
+    width: 80%;
+    margin: 25px auto;
+    padding: 3vw;
+    background-position: right;
+}
+.Song{
+    height: 70%;
+    overflow: scroll;
+}
+.songContent{
+    margin: 15px 0;
+    display: flex;
+    background-color: wheat;
+    color: black;
+    justify-content: space-around;
+    width: 50%;
+    height: 55px;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 25px;
+}
+div.songContent:hover{
+    background-color: white !important;
+    transform: scale(1.1);
+}
+.songContent img{
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+}
+#songImage{
+    width: 35px;
+    height: 35px;
+    background-image: url("./images/metallica.png");
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    
+    border-radius: 25px;
+}
+/* #songName{
+    font-size: 30px;
+} */
+div#songDuration:hover{
+    color: lightgreen;
+    /* text-decoration: underline !important; */
+    /* transform: scale(1.5); */
+}
+.bottom{
+    position: sticky;
+    background-color: black;
+    color: white;
+    bottom: 0px;
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+#myProgressBar{
+    margin: auto;
+    width: 70%;
+    height: 10px;
+    cursor: pointer;
+}
+.range{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+.arrowButtons{
+    position: relative;
+    bottom: 0px;
+    margin: 0 5px;
+    font-size: 35px;
+    cursor: pointer;
+}
+.arrow{
+    margin: 0 5px;
+    font-size: 35px;
+    cursor: pointer;
+    /* height: 30px; */
+}
+.gif{
+    display: flex;
+    position: absolute;
+    left: 10px;
+    margin-top: 25px;
+}
+
+.gif img{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+.shuffle{
+    display: flex;
+    position: absolute;
+    right: 20px;
+    margin-top: 25px;
+    font-size: 35px;
+    cursor: pointer;
+}
+.shuffle:hover,#prev:hover,#masterplay:hover,#next:hover{
+    color: lightgreen !important;
+}
