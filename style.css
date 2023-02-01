@@ -37,10 +37,11 @@ nav li{
     min-height: 70%;
     background-color: black;
     background-image: url("./images/cover.jpeg");
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     color: white;
-    width: 80%;
+    width: 74vw;
     margin: 25px auto;
     padding: 3vw;
     background-position: right;
@@ -54,8 +55,9 @@ nav li{
     display: flex;
     background-color: wheat;
     color: black;
-    justify-content: space-around;
-    width: 50%;
+    justify-content: space-between;
+    padding: 0px 10px;
+    width: 60%;
     height: 55px;
     align-items: center;
     border-radius: 20px;
@@ -64,7 +66,7 @@ nav li{
 }
 div.songContent:hover{
     background-color: white !important;
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 .songContent img{
     width: 45px;
@@ -80,11 +82,11 @@ div.songContent:hover{
     /* background-repeat: no-repeat; */
     
     border-radius: 25px;
-}
+}   
 /* #songName{
     font-size: 30px;
 } */
-div#songDuration:hover{
+span.playButton:hover{
     color: lightgreen;
     /* text-decoration: underline !important; */
     /* transform: scale(1.5); */
@@ -117,16 +119,18 @@ div#songDuration:hover{
 }
 .arrowButtons{
     position: relative;
+    display: flex;
     bottom: 0px;
-    margin: 0 5px;
     font-size: 35px;
     cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
-.arrow{
-    margin: 0 5px;
-    font-size: 35px;
-    cursor: pointer;
-    /* height: 30px; */
+.play-pause-stop{
+    /* text-align: center; */
+    margin: 0 auto;
 }
 .gif{
     display: flex;
@@ -134,19 +138,49 @@ div#songDuration:hover{
     left: 10px;
     margin-top: 25px;
 }
-
+.bottom-name{
+    font-size: 25px;
+    font-weight: bold;
+}
 .gif img{
     opacity: 0;
     transition: opacity 0.5s ease-in;
 }
 .shuffle{
-    display: flex;
-    position: absolute;
-    right: 20px;
-    margin-top: 25px;
-    font-size: 35px;
     cursor: pointer;
+    margin-right: 15px;
 }
 .shuffle:hover,#prev:hover,#masterplay:hover,#next:hover{
     color: lightgreen !important;
+}
+
+@media screen and (max-width: 750px) {
+    .gif,#shuffle-icon
+    {
+        position: inherit;
+    }
+    .gif{
+        margin-top: 0px;
+    }
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #prev,#next,#masterplay,#shuffle-icon {
+        font-size: 25px;
+    }
+    .bottom-name{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .songContent {
+        width: 90%;
+    }
+    .songName{
+        font-size: 20px;
+    }
 }
